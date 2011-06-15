@@ -7,7 +7,7 @@ use strict; use warnings;
 
     class_default sub { 
         my ($self,$attr) = @_;
-        return $attr->name;
+        return $attr;
     };
 
     has 'foo' => ( is => 'ro', isa => 'Str');
