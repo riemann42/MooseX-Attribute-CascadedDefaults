@@ -3,9 +3,9 @@ use strict; use warnings;
 {
     package MyApp::RoleA;
     use Moose::Role;
-    use MooseX::Attribute::FlexibleDefaults;
+    use MooseX::Attribute::CascadedDefaults;
 
-    flex_default sub { 
+    class_default sub { 
         my ($self,$attr) = @_;
         return $attr->name;
     };
